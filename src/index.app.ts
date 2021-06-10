@@ -15,6 +15,7 @@ export const getElements: GetElementsFn = (answer) => {
   const YOYOMIN = 5.0;
   const TITLEDURATION = 2.0;
   const ENDINGDURATION = 3.0;
+  const ENDINGCLIPDURATION = 6.93;
 
   const bottomFadeRect = {
     x: 0,
@@ -1118,6 +1119,27 @@ export const getElements: GetElementsFn = (answer) => {
           to: 1.0,
         },
       ],
+    },
+    {
+      type: "video",
+      name: "video.ending",
+      videoKey: "ending-2021.mp4",
+      source: VideoSource.Clip,
+      startAt: TITLEDURATION +
+      answer.reply.clip.duration +
+      answer.clip.duration +
+      ENDINGDURATION,
+      endAt: TITLEDURATION +
+      answer.reply.clip.duration +
+      answer.clip.duration +
+      ENDINGDURATION +
+      ENDINGCLIPDURATION,
+      props: {
+        x: 0,
+        y: 0,
+        width: WIDTH,
+        height: HEIGHT,
+      },
     },
   ];
 };
