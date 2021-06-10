@@ -34,7 +34,7 @@ export const siteData: SiteData = {
     // values: UPLOAD_PERCENTAGE, INVITATION_DISPLAY_NAME, SOCIAL_NETWORK
     nameScreenHeader: `
       <div class="my-2 flex flex-col items-center">
-        <img src="THEME_FILE_ROOT/icon.png" class="h-24" />
+        <img src="THEME_FILE_ROOT/icon-blue.png" class="h-24" />
       </div>
     `,
   },
