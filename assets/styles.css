@@ -1,0 +1,26 @@
+.ios .iosOnly,
+.android .androidOnly,
+.twitter .twitterOnly,
+.instagram .instagramOnly,
+.tiktok .tiktokOnly,
+.snapchat .snapchatOnly {
+  display: unset;
+}
+
+body {
+  background-color: #3668ff;
+}
+
+#videoArea {
+  background: linear-gradient(
+    -15deg,
+    #000000 0%,
+    #3668ff 15%,
+    #8ea9f8 20%,
+    #8ea9f8 40%,
+    #3668ff 55%,
+    #000000 100%
+  );
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+}
