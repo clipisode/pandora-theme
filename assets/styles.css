@@ -11,6 +11,10 @@ body {
   background-color: #3668ff;
 }
 
+#nameScreen button {
+  background-color: #3668ff;
+}
+
 #videoArea {
   background: linear-gradient(
     -15deg,
