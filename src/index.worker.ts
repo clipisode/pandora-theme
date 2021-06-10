@@ -58,7 +58,8 @@ export const siteData: SiteData = {
     markup: `
       <div class="flex flex-grow flex-col items-center">
         <div>
-          <p id="awesome" class="mt-12 mb-6 mx-3 text-center">Nice work! Your video reply for <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> was sent.</span></p>
+          <p id="awesome" class="mt-12 mb-6 mx-3 text-center">Nice work!</p>
+          <p id="awesome" class="mt-6 mb-6 mx-3 text-center">Your video reply for <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> was sent.</span></p>
           <div class="items-center flex flex-col">
             <a href="https://pandora.com">
               <img src="THEME_FILE_ROOT/logo-blue.png" style="width: 200px;" />
