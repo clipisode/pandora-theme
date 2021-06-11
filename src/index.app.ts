@@ -101,10 +101,10 @@ export const getElements: GetElementsFn = (answer) => {
       props: {
         videoKey: answer.clip.id,
         position: "last",
-        x: 0,
-        y: 0,
-        width: WIDTH,
-        height: HEIGHT,
+        x: 0 + 20,
+        y: 0 + 20,
+        width: 2*WIDTH/3,
+        height: 2*HEIGHT/3,
       },
     },
     {
