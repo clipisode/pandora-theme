@@ -279,7 +279,7 @@ export const getElements: GetElementsFn = (answer) => {
       startAt: 0,
       endAt: TITLEDURATION,
       props: {
-        imageKey: "logo.png",
+        imageKey: "logo-blue.png",
         x: WIDTH - 2 * SPACING - LOGOWIDTH,
         y: HEIGHT - 3 * SPACING - LOGOHEIGHT,
         width: LOGOWIDTH,
@@ -309,7 +309,7 @@ export const getElements: GetElementsFn = (answer) => {
       startAt: TITLEDURATION,
       endAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration,
       props: {
-        imageKey: "icon.png",
+        imageKey: "icon-blue.png",
         alpha: 0.8,
         x: 575,
         y: 50,
@@ -1032,7 +1032,7 @@ export const getElements: GetElementsFn = (answer) => {
         answer.clip.duration +
         ENDINGDURATION,
       props: {
-        imageKey: "icon.png",
+        imageKey: "icon-blue.png",
         x: 250,
         y: 210,
         width: 220,
@@ -1083,7 +1083,7 @@ export const getElements: GetElementsFn = (answer) => {
         answer.clip.duration +
         ENDINGDURATION,
       props: {
-        imageKey: "logo.png",
+        imageKey: "logo-blue.png",
         x: WIDTH - 2 * SPACING - LOGOWIDTH,
         y: HEIGHT - 3 * SPACING - LOGOHEIGHT,
         width: LOGOWIDTH,
@@ -1119,6 +1119,20 @@ export const getElements: GetElementsFn = (answer) => {
           to: 1.0,
         },
       ],
+    },
+    {
+      type: "video",
+      name: "video.ending",
+      videoKey: "ending-2021.mp4",
+      source: VideoSource.Theme,
+      startAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration + ENDINGDURATION,
+      endAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration + ENDINGDURATION + ENDINGCLIPDURATION,
+      props: {
+        x: 0,
+        y: 0,
+        width: WIDTH,
+        height: HEIGHT,
+      },
     },
   ];
 };
