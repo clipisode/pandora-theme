@@ -1120,26 +1120,5 @@ export const getElements: GetElementsFn = (answer) => {
         },
       ],
     },
-    {
-      type: "video",
-      name: "video.ending",
-      videoKey: "ending-2021.mp4",
-      source: VideoSource.Clip,
-      startAt: TITLEDURATION +
-      answer.reply.clip.duration +
-      answer.clip.duration +
-      ENDINGDURATION,
-      endAt: TITLEDURATION +
-      answer.reply.clip.duration +
-      answer.clip.duration +
-      ENDINGDURATION +
-      ENDINGCLIPDURATION,
-      props: {
-        x: 0,
-        y: 0,
-        width: WIDTH,
-        height: HEIGHT,
-      },
-    },
   ];
 };
