@@ -186,7 +186,7 @@ export const getElements: GetElementsFn = (answer) => {
       startAt: 0,
       endAt: TITLEDURATION - 0.1,
       props: {
-        value: answer.ask.title + " 🔥🔥🔥 mighty mighty bosstones carl weathers scarlett johansson arnold schwarzenegger"
+        value: answer.ask.title + " 🔥🔥🔥 mighty mighty bosstones carl weathers scarlett johansson arnold schwarzenegger",
         color: "#FFFFFF",
         fontName: "FiraSans-ExtraBold",
         fontSize: 80,
