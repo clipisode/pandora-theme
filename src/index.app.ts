@@ -23,9 +23,9 @@ export const getElements: GetElementsFn = (answer) => {
     width: WIDTH,
     height: 210,
     //rVal: 54,
-    //rVal: 255,
-    //gVal: 104,
-    //bVal: 255,
+    rVal: 255,
+    gVal: 104,
+    bVal: 255,
   };
 
   const displayNameTextProps = {
