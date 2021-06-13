@@ -14,7 +14,6 @@ export const getElements: GetElementsFn = (answer) => {
   const LOGOHEIGHT = 39.3;
   const YOYOMIN = 5.0;
   const TITLEDURATION = 2.0;
-  const ENDINGDURATION = 3.0;
   const ENDINGCLIPDURATION = 6.93;
 
   const bottomFadeRect = {
@@ -101,10 +100,10 @@ export const getElements: GetElementsFn = (answer) => {
       props: {
         videoKey: answer.clip.id,
         position: "last",
-        x: 0 + 20,
-        y: 0 + 20,
-        width: 2*WIDTH/3,
-        height: 2*HEIGHT/3,
+        x: 0,
+        y: 0,
+        width: WIDTH,
+        height: HEIGHT,
       },
     },
     {
@@ -664,6 +663,10 @@ export const getElements: GetElementsFn = (answer) => {
       endAt: TITLEDURATION + answer.reply.clip.duration,
       props: {
         alpha: 1,
+        //rVal: 54,
+        rVal: 255,
+        gVal: 104,
+        bVal: 255,
         ...bottomFadeRect,
       },
       animations:
@@ -760,6 +763,10 @@ export const getElements: GetElementsFn = (answer) => {
       endAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration,
       props: {
         alpha: 1,
+        //rVal: 54,
+        rVal: 255,
+        gVal: 104,
+        bVal: 255,
         ...bottomFadeRect,
       },
       animations:
@@ -1125,14 +1132,23 @@ export const getElements: GetElementsFn = (answer) => {
       name: "video.ending",
       videoKey: "ending-2021.mp4",
       source: VideoSource.Theme,
-      startAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration + ENDINGDURATION,
-      endAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration + ENDINGDURATION + ENDINGCLIPDURATION,
+      startAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration + ENDINGDURATION - 0.25,
+      endAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration + ENDINGDURATION + ENDINGCLIPDURATION - 0.25,
       props: {
         x: 0,
         y: 0,
         width: WIDTH,
         height: HEIGHT,
       },
+      animations: [
+        {
+          startAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration + ENDINGDURATION - 0.25,
+          endAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration + ENDINGDURATION,
+          field: "alpha",
+          from: 0.0,
+          to: 1.0,
+        },
+      ],
     },
   ];
 };
