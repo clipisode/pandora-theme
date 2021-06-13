@@ -21,6 +21,10 @@ export const getElements: GetElementsFn = (answer) => {
     y: HEIGHT - 210,
     width: WIDTH,
     height: 210,
+    //rVal: 54,
+    //rVal: 255,
+    //gVal: 104,
+    //bVal: 255,
   };
 
   const displayNameTextProps = {
@@ -150,7 +154,8 @@ export const getElements: GetElementsFn = (answer) => {
       startAt: 0,
       endAt: TITLEDURATION,
       props: {
-        color: "#0066BB",
+        //color: "#0066BB",
+        color: "#ffc0cb",
         alpha: 1.0,
         x: 2 * SPACING,
         y: 880,
@@ -663,10 +668,6 @@ export const getElements: GetElementsFn = (answer) => {
       endAt: TITLEDURATION + answer.reply.clip.duration,
       props: {
         alpha: 1,
-        //rVal: 54,
-        rVal: 255,
-        gVal: 104,
-        bVal: 255,
         ...bottomFadeRect,
       },
       animations:
@@ -763,10 +764,6 @@ export const getElements: GetElementsFn = (answer) => {
       endAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration,
       props: {
         alpha: 1,
-        //rVal: 54,
-        rVal: 255,
-        gVal: 104,
-        bVal: 255,
         ...bottomFadeRect,
       },
       animations:
