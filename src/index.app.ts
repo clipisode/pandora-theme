@@ -14,6 +14,7 @@ export const getElements: GetElementsFn = (answer) => {
   const LOGOHEIGHT = 39.3;
   const YOYOMIN = 5.0;
   const TITLEDURATION = 2.0;
+  const ENDINGDURATION = 3.0;
   const ENDINGCLIPDURATION = 6.93;
 
   const bottomFadeRect = {
