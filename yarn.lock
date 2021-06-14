@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@clipisode/theme@~0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@clipisode/theme/-/theme-0.0.7.tgz#31690be2f21c61eb9253f819afb5125b33efea02"
-  integrity sha512-ckVaO66Bs1EweTPwbEHDcd/MfMaDjP2bQKNpPsxzYtGugylNSeNGd7z7pQzz3jJwP3wAJH1rODvd2sg9ppZkxA==
+"@clipisode/theme@~0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@clipisode/theme/-/theme-0.0.8.tgz#cd4cfb84902d3eb184a5c5852cdf33fcf4c3db76"
+  integrity sha512-eyrb7CVPrqo4izf+jasFekwG6UoFkue+QWg7CTR318zvIk+jgBWLE8d6ZcaImzHWqv+rEqXH7Pa5wNCfTAntiA==
 
 "@types/lodash@^4.14.168":
   version "4.14.168"
