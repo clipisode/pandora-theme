@@ -571,7 +571,7 @@ export const getElements: GetElementsFn = (answer) => {
       endAt: TITLEDURATION + answer.reply.clip.duration,
       props: {
         alpha: 1,
-        ...bottomFadeRect,
+        ...nameRectProps,
       },
       animations:
         answer.reply.clip.duration < YOYOMIN
@@ -609,7 +609,7 @@ export const getElements: GetElementsFn = (answer) => {
       props: {
         alpha: 1,
         value: answer.reply.clip.displayName,
-        ...displayNameTextProps,
+        ...nameTextProps,
       },
       animations:
         answer.reply.clip.duration < YOYOMIN
@@ -668,7 +668,7 @@ export const getElements: GetElementsFn = (answer) => {
       endAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration,
       props: {
         alpha: 1,
-        ...bottomFadeRect,
+        ...nameRectProps,
       },
       animations:
         answer.clip.duration < YOYOMIN
@@ -728,7 +728,7 @@ export const getElements: GetElementsFn = (answer) => {
       props: {
         alpha: 1,
         value: answer.clip.displayName,
-        ...displayNameTextProps,
+        ...nameTextProps,
       },
       animations:
         answer.clip.duration < YOYOMIN
