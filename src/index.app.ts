@@ -840,13 +840,13 @@ export const getElements: GetElementsFn = (answer) => {
             ],
     },
     {
-      type: "video",
-      name: "video.ending",
-      videoKey: "ending-2021.mp4",
-      source: VideoSource.Theme,
-      startAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration - 0.2,
-      endAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration + ENDINGCLIPDURATION - 0.2,
+      type: "rect",
+      name: "ending.shade",
+      startAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration - 0.25,
+      endAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration,
       props: {
+        color: "#000000",
+        alpha: 0.0,
         x: 0,
         y: 0,
         width: WIDTH,
@@ -854,13 +854,27 @@ export const getElements: GetElementsFn = (answer) => {
       },
       animations: [
         {
-          startAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration - 0.2,
+          startAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration - 0.25,
           endAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration,
           field: "alpha",
           from: 0.0,
           to: 1.0,
         },
       ],
+    },
+    {
+      type: "video",
+      name: "ending.bumper",
+      videoKey: "ending-2021.mp4",
+      source: VideoSource.Theme,
+      startAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration,
+      endAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration + ENDINGCLIPDURATION,
+      props: {
+        x: 0,
+        y: 0,
+        width: WIDTH,
+        height: HEIGHT,
+      },
     },
   ];
 };
