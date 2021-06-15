@@ -208,12 +208,11 @@ export const getElements: GetElementsFn = (answer) => {
       startAt: 0,
       endAt: TITLEDURATION,
       props: {
-        //value: answer.clip.displayName,
-        value: "Kira Kosarin",
+        value: answer.clip.displayName,
         color: "#FFFFFF",
         fontName: "OpenSans-Regular",
-        fontSize: 36,
-        lineHeight: 36,
+        fontSize: 40,
+        lineHeight: 40,
         textAlign: TextAlign.Center,
         x: SPACING,
         y: 260,
@@ -604,8 +603,7 @@ export const getElements: GetElementsFn = (answer) => {
       endAt: TITLEDURATION + answer.reply.clip.duration,
       props: {
         alpha: 1,
-        //rVal: 54,
-        rVal: 255,
+        rVal: 54,
         gVal: 104,
         bVal: 255,
         ...nameRectProps,
@@ -705,6 +703,9 @@ export const getElements: GetElementsFn = (answer) => {
       endAt: TITLEDURATION + answer.reply.clip.duration + answer.clip.duration,
       props: {
         alpha: 1,
+        rVal: 54,
+        gVal: 104,
+        bVal: 255,
         ...nameRectProps,
       },
       animations:
