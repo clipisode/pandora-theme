@@ -10,7 +10,7 @@ export const getElements: GetElementsFn = (answer) => {
   const HEIGHT = 1280;
   const SPACING = 25;
   const YOYOMIN = 5.0;
-  const TITLEDURATION = 2.0;
+  const TITLEDURATION = 1.5;
   const ENDINGCLIPDURATION = 6.9;
 
   const nameRectProps = {
@@ -20,6 +20,23 @@ export const getElements: GetElementsFn = (answer) => {
     height: 100,
     color: "#000000",
   };
+
+  const titleAnimations = [
+    {
+      startAt: TITLEDURATION - 0.5,
+      endAt: TITLEDURATION - 0.1,
+      field: "alpha",
+      from: 1.0,
+      to: 0.0,
+    },
+    {
+      startAt: TITLEDURATION - 0.1,
+      endAt: TITLEDURATION,
+      field: "alpha",
+      from: 0.0,
+      to: 0.0,
+    },
+  ];
 
   const nameTextProps = {
     fontName: "OpenSans-Regular",
@@ -121,28 +138,69 @@ export const getElements: GetElementsFn = (answer) => {
       },
     },
     {
-      type: "rect",
-      name: "title.shade",
+      type: "image",
+      name: "title.fade",
       startAt: 0,
-      endAt: 2,
+      endAt: TITLEDURATION,
       props: {
-        textAlign: TextAlign.Left,
-        color: "#000000",
-        alpha: 0.65,
+        imageKey: "title-fade.png",
         x: 0,
         y: 0,
         width: WIDTH,
         height: HEIGHT,
+        alpha: 1,
       },
-      animations: [
-        {
-          startAt: TITLEDURATION - 0.4,
-          endAt: TITLEDURATION,
-          field: "alpha",
-          from: 0.65,
-          to: 0.0,
-        },
-      ],
+      animations: titleAnimations,
+    },
+    {
+      type: "image",
+      name: "title.image",
+      startAt: 0,
+      endAt: TITLEDURATION,
+      props: {
+        imageKey: "title.png",
+        x: 0,
+        y: 0,
+        width: WIDTH,
+        height: 240,
+        alpha: 1,
+      },
+      animations: titleAnimations,
+    },
+    {
+      type: "image",
+      name: "title.sponsor",
+      startAt: 0,
+      endAt: TITLEDURATION,
+      props: {
+        imageKey: "capital-one-logo-white.png",
+        x: WIDTH - 230,
+        y: HEIGHT - 120,
+        width: 180,
+        height: 65,
+        alpha: 1,
+      },
+      animations: titleAnimations,
+    },
+    {
+      type: "text",
+      name: "title.featuring",
+      startAt: 0,
+      endAt: TITLEDURATION,
+      props: {
+        value: "FEATURING",
+        color: "#FFFFFF",
+        fontName: "OpenSans-Bold",
+        fontSize: 20,
+        lineHeight: 36,
+        textAlign: TextAlign.Center,
+        x: SPACING,
+        y: 240,
+        width: 280,
+        height: 54,
+        alpha: 1,
+      },
+      animations: titleAnimations,
     },
     {
       type: "text",
@@ -155,59 +213,34 @@ export const getElements: GetElementsFn = (answer) => {
         fontName: "OpenSans-Regular",
         fontSize: 36,
         lineHeight: 36,
-        textAlign: TextAlign.Left,
-        x: 2 * SPACING,
-        y: 910,
-        width: WIDTH - 6 * SPACING,
+        textAlign: TextAlign.Center,
+        x: SPACING,
+        y: 260,
+        width: 280,
         height: 54,
         alpha: 1,
       },
-      animations: [
-        {
-          startAt: TITLEDURATION - 0.5,
-          endAt: TITLEDURATION - 0.1,
-          field: "alpha",
-          from: 1.0,
-          to: 0.0,
-        },
-        {
-          startAt: TITLEDURATION - 0.1,
-          endAt: TITLEDURATION,
-          field: "alpha",
-          from: 0.0,
-          to: 0.0,
-        },
-      ],
+      animations: titleAnimations,
     },
     {
-      type: "image",
-      name: "title.gradient",
+      type: "text",
+      name: "title.presented",
       startAt: 0,
       endAt: TITLEDURATION,
       props: {
-        imageKey: "title-gradient.png",
-        x: 0,
-        y: 0,
-        width: 720,
-        height: 300,
+        value: "PRESENTED BY",
+        color: "#FFFFFF",
+        fontName: "OpenSans-Bold",
+        fontSize: 20,
+        lineHeight: 36,
+        textAlign: TextAlign.Center,
+        x: WIDTH - 230,
+        y: HEIGHT - 170,
+        width: 280,
+        height: 54,
         alpha: 1,
       },
-      animations: [
-        {
-          startAt: TITLEDURATION - 0.5,
-          endAt: TITLEDURATION - 0.1,
-          field: "alpha",
-          from: 1.0,
-          to: 0.0,
-        },
-        {
-          startAt: TITLEDURATION - 0.1,
-          endAt: TITLEDURATION,
-          field: "alpha",
-          from: 0.0,
-          to: 0.0,
-        },
-      ],
+      animations: titleAnimations,
     },
     {
       type: "image",
