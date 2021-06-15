@@ -86,8 +86,8 @@ export const getElements: GetElementsFn = (answer) => {
       name: "video.reply",
       videoKey: answer.reply.clip.id,
       source: VideoSource.Clip,
-      startAt: 2,
-      endAt: 2 + answer.reply.clip.duration,
+      startAt: TITLEDURATION,
+      endAt: TITLEDURATION + answer.reply.clip.duration,
       props: {
         x: 0,
         y: 0,
@@ -191,11 +191,11 @@ export const getElements: GetElementsFn = (answer) => {
         value: "FEATURING",
         color: "#FFFFFF",
         fontName: "OpenSans-Bold",
-        fontSize: 20,
+        fontSize: 24,
         lineHeight: 36,
         textAlign: TextAlign.Center,
         x: SPACING,
-        y: 240,
+        y: 220,
         width: 280,
         height: 54,
         alpha: 1,
@@ -208,7 +208,8 @@ export const getElements: GetElementsFn = (answer) => {
       startAt: 0,
       endAt: TITLEDURATION,
       props: {
-        value: answer.clip.displayName,
+        //value: answer.clip.displayName,
+        value: "Kira Kosarin",
         color: "#FFFFFF",
         fontName: "OpenSans-Regular",
         fontSize: 36,
@@ -231,12 +232,12 @@ export const getElements: GetElementsFn = (answer) => {
         value: "PRESENTED BY",
         color: "#FFFFFF",
         fontName: "OpenSans-Bold",
-        fontSize: 20,
+        fontSize: 24,
         lineHeight: 36,
         textAlign: TextAlign.Center,
         x: WIDTH - 230,
-        y: HEIGHT - 170,
-        width: 280,
+        y: HEIGHT - 160,
+        width: 180,
         height: 54,
         alpha: 1,
       },
@@ -597,13 +598,16 @@ export const getElements: GetElementsFn = (answer) => {
             ],
     },
     {
-      // TODO: convert to a Snapchat story-style stripe
       type: "gradient",
       name: "question.fade",
       startAt: TITLEDURATION,
       endAt: TITLEDURATION + answer.reply.clip.duration,
       props: {
         alpha: 1,
+        //rVal: 54,
+        rVal: 255,
+        gVal: 104,
+        bVal: 255,
         ...nameRectProps,
       },
       animations:
@@ -833,44 +837,6 @@ export const getElements: GetElementsFn = (answer) => {
                 to: 0,
               },
             ],
-    },
-    {
-      type: "rect",
-      name: "ending.shade",
-      startAt:
-        TITLEDURATION +
-        answer.reply.clip.duration +
-        answer.clip.duration -
-        0.25,
-      endAt:
-        TITLEDURATION +
-        answer.reply.clip.duration +
-        answer.clip.duration,
-      props: {
-        color: "#000000",
-        alpha: 1.0,
-        x: 0,
-        y: 0,
-        width: 720,
-        height: 1280,
-      },
-      animations: [
-        {
-          startAt:
-            TITLEDURATION +
-            answer.reply.clip.duration +
-            answer.clip.duration -
-            0.25,
-          endAt:
-            TITLEDURATION +
-            answer.reply.clip.duration +
-            answer.clip.duration +
-            0.25,
-          field: "alpha",
-          from: 0,
-          to: 1.0,
-        },
-      ],
     },
     {
       type: "video",
