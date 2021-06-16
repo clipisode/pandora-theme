@@ -26,7 +26,7 @@ export const siteData: SiteData = {
         <div class="m-8">QR_CODE</div>
         <div>
           <p class="m-4 mb-6 text-base">Point your camera at the QR code to open this link on your
-          phone and send <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b></span> <span class="whitespace-nowrap">a video reply.</span></p>
+          phone and send <b>INVITATION_DISPLAY_NAME</b> a <span class="whitespace-nowrap">video reply.</span></p>
         </div>
     </div>`,
   },
@@ -59,7 +59,7 @@ export const siteData: SiteData = {
       <div class="flex flex-grow flex-col items-center">
         <div>
           <p id="awesome" class="mt-12 mb-6 mx-3 text-center">Nice work!</p>
-          <p id="awesome" class="mt-6 mb-6 mx-3 text-center">Your video reply for <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> was sent.</span></p>
+          <p id="awesome" class="mt-6 mb-6 mx-3 text-center">Your video reply for <b>INVITATION_DISPLAY_NAME</b> <span class="whitespace-nowrap">was sent.</span></p>
           <div class="items-center flex flex-col">
             <a href="https://pandora.com">
               <img src="THEME_FILE_ROOT/logo-blue.png" style="width: 200px;" />
